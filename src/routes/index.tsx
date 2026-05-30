@@ -5,6 +5,7 @@ import hero from "@/assets/hero-cleanup.jpg";
 import {
   ArrowRight, Boxes, Home, Building2, Warehouse, Recycle, Trash2,
   Sparkles, ShieldCheck, Clock, Wallet, MapPin, Phone, MessageCircle,
+  Wrench, Leaf, Snowflake, Shield,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
