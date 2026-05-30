@@ -33,7 +33,9 @@ export function AnfrageForm() {
 
   const validate = () => {
     if (!form.name.trim()) return "Bitte Namen angeben.";
-    if (!form.phone.trim() && !form.email.trim()) return "Bitte Telefon oder E-Mail angeben.";
+    if (!form.phone.trim()) return "Bitte Telefon angeben.";
+    if (!form.email.trim()) return "Bitte E-Mail angeben.";
+    if (!form.strasse.trim()) return "Bitte Straße & Hausnummer angeben.";
     if (!form.plz.trim() || !form.ort.trim()) return "Bitte PLZ und Wohnort angeben.";
     if (types.length === 0) return "Bitte mindestens eine Objektart auswählen.";
     return null;
@@ -77,7 +79,7 @@ export function AnfrageForm() {
     return false;
   };
 
-const sendWhatsApp = async () => {
+  const sendWhatsApp = async () => {
     const err = validate();
     if (err) return alert(err);
     setSending("wa");
@@ -98,7 +100,7 @@ const sendWhatsApp = async () => {
     window.open(url, "_blank");
     setSending(null);
   };
-  
+
   const sendEmail = async () => {
     const err = validate();
     if (err) return alert(err);
@@ -143,10 +145,10 @@ const sendWhatsApp = async () => {
         <Field label="Name *">
           <input className={inputCls} value={form.name} onChange={(e) => update("name", e.target.value)} />
         </Field>
-        <Field label="Telefon">
+        <Field label="Telefon *">
           <input className={inputCls} value={form.phone} onChange={(e) => update("phone", e.target.value)} />
         </Field>
-        <Field label="E-Mail">
+        <Field label="E-Mail *">
           <input type="email" className={inputCls} value={form.email} onChange={(e) => update("email", e.target.value)} />
         </Field>
         <Field label="Wohnort *">
@@ -155,7 +157,7 @@ const sendWhatsApp = async () => {
         <Field label="PLZ *">
           <input className={inputCls} value={form.plz} onChange={(e) => update("plz", e.target.value)} />
         </Field>
-        <Field label="Straße & Hausnummer">
+        <Field label="Straße & Hausnummer *">
           <input className={inputCls} value={form.strasse} onChange={(e) => update("strasse", e.target.value)} />
         </Field>
         <Field label="Anzahl Zimmer/Räume">
