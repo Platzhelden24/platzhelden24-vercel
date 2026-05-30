@@ -26,6 +26,14 @@ const services = [
   { icon: Trash2, title: "Gewerbe-Räumung", text: "Büros, Lager, Praxen – auch außerhalb der Geschäftszeiten." },
 ];
 
+const additionalServices = [
+  { icon: Wrench, title: "Hausmeisterservice", text: "Kleine Reparaturen, Wartung und technischer Service – zuverlässig und schnell." },
+  { icon: Leaf, title: "Gartenpflege", text: "Rasenmähen, Heckenschnitt, Bepflanzung – Ihr Garten in besten Händen." },
+  { icon: Snowflake, title: "Winterdienst", text: "Schneeräumung und Streudienst für Gehwege und Einfahrten." },
+  { icon: Sparkles, title: "Reinigung", text: "Gründliche Endreinigung nach Entrümpelung oder auf Anfrage." },
+  { icon: Shield, title: "Objektbetreuung", text: "Regelmäßige Betreuung und Kontrolle Ihrer Immobilie – verlässlich und diskret." },
+];
+
 const stats = [
   { value: "24 h", label: "Antwortzeit" },
   { value: "Festpreis", label: "Garantie" },
@@ -120,6 +128,21 @@ function Index() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10">
+          <p className="mb-6 text-sm font-bold uppercase tracking-widest text-brand-green">Weitere Leistungen</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {additionalServices.map((s) => (
+              <div key={s.title} className="group rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-1 hover:border-brand-green hover:shadow-brand">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green/15 text-brand-green transition group-hover:bg-brand-green group-hover:text-white">
+                  <s.icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-4 text-base font-bold text-brand-navy">{s.title}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
