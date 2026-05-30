@@ -98,6 +98,7 @@ const sendWhatsApp = async () => {
     window.open(url, "_blank");
     setSending(null);
   };
+  
   const sendEmail = async () => {
     const err = validate();
     if (err) return alert(err);
