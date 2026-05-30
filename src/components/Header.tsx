@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import logo from "@/assets/logo-full.png";
@@ -17,9 +16,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
-        <Link to="/" className="flex items-center gap-2">
+        <a href="/" onClick={() => window.location.href = "/"} className="flex items-center gap-2">
           <img src={logo} alt="Platzhelden24" className="h-12 w-auto md:h-14" />
-        </Link>
+        </a>
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <a
