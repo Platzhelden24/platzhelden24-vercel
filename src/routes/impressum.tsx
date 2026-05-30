@@ -2,12 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { COMPANY } from "@/lib/contact";
 
 export const Route = createFileRoute("/impressum")({
-  head: () => ({
-    meta: [
-      { title: "Impressum – Platzhelden24" },
-      { name: "description", content: "Impressum von Platzhelden24, Inhaber Granit Brovina, Kleve." },
-    ],
-  }),
   component: Page,
 });
 
@@ -33,36 +27,37 @@ function Page() {
           </p>
         </section>
         <section>
-          <h2 className="text-xl font-bold text-brand-navy">Umsatzsteuer-ID</h2>
-          <p className="mt-2 text-muted-foreground">[Bitte ergänzen, sofern vorhanden]</p>
-        </section>
-        <section>
-          <h2 className="text-xl font-bold text-brand-navy">
-            Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
-          </h2>
+          <h2 className="text-xl font-bold text-brand-navy">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
           <p className="mt-2">{COMPANY.owner}, {COMPANY.street}, {COMPANY.zip} {COMPANY.city}</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-brand-navy">Streitschlichtung</h2>
           <p className="mt-2">
-            Die Europäische Kommission stellt eine Plattform zur
-            Online-Streitbeilegung (OS) bereit:{" "}
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
             <a className="text-brand-green underline" href="https://ec.europa.eu/consumers/odr">
               https://ec.europa.eu/consumers/odr
-            </a>. Wir sind nicht bereit oder verpflichtet, an
-            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.
+            </a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
           </p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-brand-navy">Haftung für Inhalte</h2>
           <p className="mt-2">
-            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
-            auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-            Verpflichtungen zur Entfernung oder Sperrung von Informationen nach
-            allgemeinen Gesetzen bleiben hiervon unberührt.
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
           </p>
         </section>
+        <section>
+          <h2 className="text-xl font-bold text-brand-navy">Haftung für Links</h2>
+          <p className="mt-2">
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+          </p>
+        </section>
+        <section>
+          <h2 className="text-xl font-bold text-brand-navy">Urheberrecht</h2>
+          <p className="mt-2">
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </section>
+        <p className="text-sm text-muted-foreground">Stand: Januar 2026</p>
       </div>
     </div>
   );
