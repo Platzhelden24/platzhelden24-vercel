@@ -98,15 +98,6 @@ const sendWhatsApp = async () => {
     window.open(url, "_blank");
     setSending(null);
   };
-      } catch {
-        /* user cancelled or not supported */
-      }
-    }
-    const url = `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
-    setSending(null);
-  };
-
   const sendEmail = async () => {
     const err = validate();
     if (err) return alert(err);
