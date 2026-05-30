@@ -82,6 +82,18 @@ const sendWhatsApp = async () => {
     if (err) return alert(err);
     setSending("wa");
     const text = buildText();
+    if (files.length > 0 && typeof navigator !== "undefined" && (navigator as any).canShare) {
+      try {
+        const shareData: any = { text, files };
+        if ((navigator as any).canShare(shareData)) {
+          await (navigator as any).share(shareData);
+          setSending(null);
+          return;
+        }
+      } catch {
+        /* user cancelled or not supported */
+      }
+    }
     const url = `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
     setSending(null);
