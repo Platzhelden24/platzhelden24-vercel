@@ -77,19 +77,15 @@ export function AnfrageForm() {
     return false;
   };
 
-  const sendWhatsApp = async () => {
+const sendWhatsApp = async () => {
     const err = validate();
     if (err) return alert(err);
     setSending("wa");
     const text = buildText();
-    if (files.length > 0 && typeof navigator !== "undefined" && (navigator as any).canShare) {
-      try {
-        const shareData: any = { text, files };
-        if ((navigator as any).canShare(shareData)) {
-          await (navigator as any).share(shareData);
-          setSending(null);
-          return;
-        }
+    const url = `https://wa.me/${COMPANY.whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+    setSending(null);
+  };
       } catch {
         /* user cancelled or not supported */
       }
