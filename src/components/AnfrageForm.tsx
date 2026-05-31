@@ -33,7 +33,6 @@ export function AnfrageForm() {
 
   const validate = () => {
     if (!form.name.trim()) return "Bitte Namen angeben.";
-    if (!form.phone.trim()) return "Bitte Telefon angeben.";
     if (!form.email.trim()) return "Bitte E-Mail angeben.";
     if (!form.strasse.trim()) return "Bitte Straße & Hausnummer angeben.";
     if (!form.plz.trim() || !form.ort.trim()) return "Bitte PLZ und Wohnort angeben.";
@@ -145,7 +144,7 @@ export function AnfrageForm() {
         <Field label="Name *">
           <input className={inputCls} value={form.name} onChange={(e) => update("name", e.target.value)} />
         </Field>
-        <Field label="Telefon *">
+        <Field label="Telefon">
           <input className={inputCls} value={form.phone} onChange={(e) => update("phone", e.target.value)} />
         </Field>
         <Field label="E-Mail *">
