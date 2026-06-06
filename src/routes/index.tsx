@@ -9,30 +9,68 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Platzhelden24 – Entrümpelung in Kleve | Festpreis & besenrein" },
-      { name: "description", content: "Profi-Entrümpelung in Kleve und Umgebung. Festpreis-Garantie, besenrein, termintreu. Jetzt kostenlos anfragen – Antwort in 24 Stunden." },
-    ],
-  }),
   component: Index,
 });
 
 const services = [
-  { icon: Home, title: "Wohnungsauflösung", text: "Vom 1-Zimmer-Apartment bis zur kompletten Etagenwohnung – schnell und sauber." },
-  { icon: Building2, title: "Haushaltsauflösung", text: "Komplette Häuser und Erbschaften pietätvoll geräumt und entsorgt." },
-  { icon: Warehouse, title: "Keller & Dachboden", text: "Auch enge Räume, alte Möbel und Sperrgut – wir kommen mit allem klar." },
-  { icon: Recycle, title: "Fachgerechte Entsorgung", text: "Umweltgerechte Trennung und Entsorgung nach geltenden Vorschriften." },
-  { icon: Boxes, title: "Messie-Wohnungen", text: "Diskret, geruchsneutral und ohne Vorurteile – wir helfen, wo andere aufgeben." },
-  { icon: Trash2, title: "Gewerbe-Räumung", text: "Büros, Lager, Praxen – auch außerhalb der Geschäftszeiten." },
+  {
+    icon: Home,
+    title: "Wohnungsauflösung",
+    text: "Professionelle Wohnungsauflösung in Kleve & Niederrhein – vom 1-Zimmer-Apartment bis zur kompletten Etagenwohnung. Schnell, besenrein und zum Festpreis.",
+  },
+  {
+    icon: Building2,
+    title: "Haushaltsauflösung",
+    text: "Vollständige Haushaltsauflösung bei Umzug, Erbschaft oder Todesfall – pietätvoll, diskret und fachgerecht entsorgt. Inklusive Wertanrechnung.",
+  },
+  {
+    icon: Warehouse,
+    title: "Keller & Dachboden",
+    text: "Kellerentrümpelung und Dachbodenentrümpelung im Raum Kleve – auch enge Räume, Sperrgut, Elektroschrott und alte Möbel kein Problem.",
+  },
+  {
+    icon: Recycle,
+    title: "Fachgerechte Entsorgung",
+    text: "Umweltgerechte Mülltrennung und legale Entsorgung nach geltenden Vorschriften – inklusive Sperrmüll, Elektroschrott und Sondermüll.",
+  },
+  {
+    icon: Boxes,
+    title: "Messie-Wohnungen",
+    text: "Messie-Entrümpelung in Kleve – diskret, geruchsneutral und ohne Vorurteile. Spezialausrüstung und erfahrenes Team. Wir helfen, wo andere aufgeben.",
+  },
+  {
+    icon: Trash2,
+    title: "Gewerbe-Räumung",
+    text: "Gewerbeentrümpelung für Büros, Lager, Praxen und Werkstätten – zuverlässig, auch kurzfristig und außerhalb der Geschäftszeiten.",
+  },
 ];
 
 const additionalServices = [
-  { icon: Wrench, title: "Hausmeisterservice", text: "Kleine Reparaturen, Wartung und technischer Service – zuverlässig und schnell." },
-  { icon: Leaf, title: "Gartenpflege", text: "Rasenmähen, Heckenschnitt, Bepflanzung – Ihr Garten in besten Händen." },
-  { icon: Snowflake, title: "Winterdienst", text: "Schneeräumung und Streudienst für Gehwege und Einfahrten." },
-  { icon: Sparkles, title: "Reinigung", text: "Gründliche Endreinigung nach Entrümpelung oder auf Anfrage." },
-  { icon: Shield, title: "Objektbetreuung", text: "Regelmäßige Betreuung und Kontrolle Ihrer Immobilie – verlässlich und diskret." },
+  {
+    icon: Wrench,
+    title: "Hausmeisterservice",
+    text: "Kleine Reparaturen, Wartung und technischer Service – zuverlässig und termingerecht in Kleve und Umgebung.",
+  },
+  {
+    icon: Leaf,
+    title: "Gartenpflege",
+    text: "Rasenmähen, Heckenschnitt, Bepflanzung und Gartenreinigung – Ihr Garten in professionellen Händen.",
+  },
+  {
+    icon: Snowflake,
+    title: "Winterdienst",
+    text: "Professionelle Schneeräumung und Streudienst für Gehwege, Einfahrten und Firmengelände in Kleve.",
+  },
+  {
+    icon: Sparkles,
+    title: "Reinigung",
+    text: "Gründliche Endreinigung nach Entrümpelung oder als eigenständige Leistung – für Privat und Gewerbe.",
+  },
+  {
+    icon: Shield,
+    title: "Objektbetreuung",
+    text: "Regelmäßige Betreuung und Kontrolle Ihrer Immobilie – verlässlich, diskret und professionell.",
+  },
 ];
 
 const stats = [
@@ -47,40 +85,59 @@ function Index() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-radial-brand text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "32px 32px",
-        }} />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+          }}
+        />
         <div className="relative mx-auto max-w-7xl px-4 pt-10 pb-24 sm:px-5 sm:pt-12 sm:pb-32 lg:px-8 lg:pt-20 lg:pb-44">
           <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-brand-green sm:px-4 sm:text-xs">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-brand-green" />
-                <span className="break-words">Entrümpelung & Haushaltsauflösung in Kleve & im gesamten Niederrhein</span>
+                <span className="break-words">
+                  Entrümpelung & Haushaltsauflösung in Kleve & im gesamten Niederrhein
+                </span>
               </div>
               <h1 className="mt-6 text-display text-[clamp(2rem,8vw,6rem)]">
-                Mehr Platz. <span className="text-brand-green">Weniger Stress.</span>
+                Mehr Platz.{" "}
+                <span className="text-brand-green">Weniger Stress.</span>
               </h1>
               <p className="mt-5 max-w-xl text-base text-white/75 sm:mt-6 sm:text-lg">
-                Wir entrümpeln Wohnungen, Häuser, Keller und Gewerbeflächen –
-                <strong className="text-white"> zum Festpreis, termintreu und besenrein</strong>.
-                Innerhalb von 24 Stunden erhalten Sie Ihr kostenloses Angebot.
+                Wir entrümpeln Wohnungen, Häuser, Keller und Gewerbeflächen in
+                Kleve, Goch, Emmerich und dem gesamten Niederrhein –{" "}
+                <strong className="text-white">
+                  zum Festpreis, termintreu und besenrein
+                </strong>
+                . Innerhalb von 24 Stunden erhalten Sie Ihr kostenloses Angebot.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-                <a href="#anfrage" className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-6 py-4 text-base font-bold text-white shadow-brand transition hover:brightness-95 sm:px-7">
+                <a
+                  href="#anfrage"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-6 py-4 text-base font-bold text-white shadow-brand transition hover:brightness-95 sm:px-7"
+                >
                   Kostenlos anfragen
                   <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
                 </a>
-                <a href={`tel:${COMPANY.phoneIntl}`} className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10 sm:px-7">
+                <a
+                  href={`tel:${COMPANY.phoneIntl}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/10 sm:px-7"
+                >
                   <Phone className="h-5 w-5 text-brand-green" /> {COMPANY.phone}
                 </a>
               </div>
               <div className="mt-10 grid max-w-lg grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
                 {stats.map((s) => (
                   <div key={s.label}>
-                    <div className="text-display text-2xl text-brand-green">{s.value}</div>
-                    <div className="text-xs uppercase tracking-wider text-white/55">{s.label}</div>
+                    <div className="text-display text-2xl text-brand-green">
+                      {s.value}
+                    </div>
+                    <div className="text-xs uppercase tracking-wider text-white/55">
+                      {s.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -89,7 +146,7 @@ function Index() {
               <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-green/40 to-transparent blur-3xl" />
               <img
                 src={hero}
-                alt="Platzhelden24 Team bei der Wohnungsentrümpelung"
+                alt="Platzhelden24 Team bei der professionellen Wohnungsentrümpelung in Kleve"
                 width={1024}
                 height={1024}
                 className="aspect-square w-full rounded-[2rem] object-cover shadow-brand"
@@ -100,7 +157,9 @@ function Index() {
                     <Sparkles className="h-5 w-5 text-brand-green" />
                   </div>
                   <div>
-                    <div className="text-xs font-semibold uppercase text-muted-foreground">Übergabe</div>
+                    <div className="text-xs font-semibold uppercase text-muted-foreground">
+                      Übergabe
+                    </div>
                     <div className="text-sm font-bold">Garantiert besenrein</div>
                   </div>
                 </div>
@@ -112,35 +171,55 @@ function Index() {
       </section>
 
       {/* LEISTUNGEN */}
-      <section id="leistungen" className="mx-auto max-w-7xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8">
+      <section
+        id="leistungen"
+        className="mx-auto max-w-7xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8"
+      >
         <div className="mb-10 max-w-2xl sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">Leistungen</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">
+            Leistungen
+          </p>
           <h2 className="mt-3 text-display text-3xl text-brand-navy sm:text-4xl md:text-5xl">
-            Alles aus einer Hand –<br />vom Anruf bis zur Schlüsselübergabe.
+            Alles aus einer Hand –<br />
+            vom Anruf bis zur Schlüsselübergabe.
           </h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div key={s.title} className="group rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1 hover:border-brand-green hover:shadow-brand">
+            <div
+              key={s.title}
+              className="group rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1 hover:border-brand-green hover:shadow-brand"
+            >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/15 text-brand-green transition group-hover:bg-brand-green group-hover:text-white">
                 <s.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-xl font-bold text-brand-navy">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {s.text}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="mt-10">
-          <p className="mb-6 text-sm font-bold uppercase tracking-widest text-brand-green">Weitere Leistungen</p>
+          <p className="mb-6 text-sm font-bold uppercase tracking-widest text-brand-green">
+            Weitere Leistungen
+          </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {additionalServices.map((s) => (
-              <div key={s.title} className="group rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-1 hover:border-brand-green hover:shadow-brand">
+              <div
+                key={s.title}
+                className="group rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-1 hover:border-brand-green hover:shadow-brand"
+              >
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green/15 text-brand-green transition group-hover:bg-brand-green group-hover:text-white">
                   <s.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 text-base font-bold text-brand-navy">{s.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.text}</p>
+                <h3 className="mt-4 text-base font-bold text-brand-navy">
+                  {s.title}
+                </h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                  {s.text}
+                </p>
               </div>
             ))}
           </div>
@@ -151,24 +230,47 @@ function Index() {
       <section id="ueber-uns" className="bg-brand-navy text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:gap-12 sm:px-5 sm:py-24 lg:grid-cols-2 lg:px-8">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">Warum Platzhelden24</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">
+              Warum Platzhelden24
+            </p>
             <h2 className="mt-3 text-display text-3xl sm:text-4xl md:text-5xl">
               Helden, denen Sie<br />vertrauen können.
             </h2>
             <p className="mt-6 max-w-md text-white/70">
-              {COMPANY.slogan} Wir sind ein Familienbetrieb aus Kleve und behandeln
-              Ihre Räume so, als wären es unsere eigenen. Transparente
-              Festpreise, faire Beratung und absolute Termintreue.
+              Platzhelden24 ist Ihr regionaler Partner für Entrümpelung und
+              Haushaltsauflösung in Kleve, Goch, Emmerich, Kalkar, Wesel und dem
+              gesamten Niederrhein. Als Familienbetrieb behandeln wir Ihre Räume
+              mit Sorgfalt und Respekt – transparente Festpreise, kostenlose
+              Beratung und absolute Termintreue garantiert.
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {[
-              { icon: Wallet, title: "Festpreis-Garantie", text: "Verbindlicher Festpreis nach Vor-Ort-Besichtigung – keine versteckten Kosten." },
-              { icon: Clock, title: "Termintreu", text: "Sie warten nicht. Wir sind pünktlich – versprochen." },
-              { icon: ShieldCheck, title: "Vollversichert", text: "Haftpflicht- und Transportversicherung inklusive." },
-              { icon: MapPin, title: "Regional verwurzelt", text: "Kleve, Goch, Emmerich, Kalkar, Duisburg, Wesel & gesamter Niederrhein." },
+              {
+                icon: Wallet,
+                title: "Festpreis-Garantie",
+                text: "Verbindlicher Festpreis nach Vor-Ort-Besichtigung oder Fotobewertung – keine versteckten Kosten, keine bösen Überraschungen.",
+              },
+              {
+                icon: Clock,
+                title: "Termintreu & schnell",
+                text: "Angebot innerhalb von 24 Stunden. Termine oft innerhalb weniger Tage. Bei dringenden Fällen auch kurzfristig.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Vollversichert",
+                text: "Haftpflicht- und Transportversicherung inklusive – Sie sind bei uns rundum abgesichert.",
+              },
+              {
+                icon: MapPin,
+                title: "Regional & zuverlässig",
+                text: "Kleve, Goch, Emmerich, Kalkar, Wesel, Duisburg & gesamter Niederrhein – wir kennen die Region.",
+              },
             ].map((b) => (
-              <div key={b.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <div
+                key={b.title}
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              >
                 <b.icon className="h-7 w-7 text-brand-green" />
                 <h3 className="mt-4 font-bold">{b.title}</h3>
                 <p className="mt-1 text-sm text-white/70">{b.text}</p>
@@ -179,21 +281,43 @@ function Index() {
       </section>
 
       {/* ABLAUF */}
-      <section id="ablauf" className="mx-auto max-w-7xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8">
+      <section
+        id="ablauf"
+        className="mx-auto max-w-7xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8"
+      >
         <div className="mb-10 max-w-2xl sm:mb-14">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">In 3 Schritten</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">
+            In 3 Schritten
+          </p>
           <h2 className="mt-3 text-display text-3xl text-brand-navy sm:text-4xl md:text-5xl">
             So einfach läuft es ab.
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { n: "01", t: "Anfrage", d: "Formular ausfüllen, Bilder hochladen oder anrufen – fertig in 2 Minuten." },
-            { n: "02", t: "Angebot", d: "Anhand der Bilder erhalten Sie ein unverbindliches Angebot. Der verbindliche Festpreis folgt nach kostenloser Vor-Ort-Besichtigung." },
-            { n: "03", t: "Räumung", d: "Wir räumen termingerecht und übergeben besenrein – Sie haben nichts zu tun." },
+            {
+              n: "01",
+              t: "Kostenlose Anfrage",
+              d: "Kontaktformular ausfüllen und Fotos hochladen oder direkt anrufen – innerhalb von 24 Stunden erhalten Sie Ihr persönliches Angebot.",
+            },
+            {
+              n: "02",
+              t: "Verbindliches Angebot",
+              d: "Anhand Ihrer Fotos oder nach kostenloser Vor-Ort-Besichtigung erstellen wir einen verbindlichen Festpreis – ohne Überraschungen.",
+            },
+            {
+              n: "03",
+              t: "Besenreine Übergabe",
+              d: "Wir räumen termingerecht, entsorgen alles fachgerecht und übergeben das Objekt sauber und besenrein – Sie haben nichts zu tun.",
+            },
           ].map((s) => (
-            <div key={s.n} className="relative overflow-hidden rounded-3xl border border-border bg-card p-8">
-              <div className="text-display text-7xl text-brand-green/15">{s.n}</div>
+            <div
+              key={s.n}
+              className="relative overflow-hidden rounded-3xl border border-border bg-card p-8"
+            >
+              <div className="text-display text-7xl text-brand-green/15">
+                {s.n}
+              </div>
               <h3 className="mt-2 text-2xl font-bold text-brand-navy">{s.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
             </div>
@@ -210,15 +334,23 @@ function Index() {
                 Bereit für mehr Platz?
               </h2>
               <p className="mt-3 max-w-lg text-white/75">
-                Kostenloses Angebot in 24 Stunden – ganz unverbindlich.
+                Kostenloses Angebot in 24 Stunden – ganz unverbindlich. Jetzt
+                Entrümpelung in Kleve & Niederrhein anfragen.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-end">
-              <a href={`https://wa.me/${COMPANY.whatsappNumber}`} target="_blank" rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-white shadow-brand">
+              <a
+                href={`https://wa.me/${COMPANY.whatsappNumber}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 font-bold text-white shadow-brand"
+              >
                 <MessageCircle className="h-5 w-5" /> WhatsApp
               </a>
-              <a href="#anfrage" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-6 py-4 font-bold text-white shadow-brand">
+              <a
+                href="#anfrage"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-6 py-4 font-bold text-white shadow-brand"
+              >
                 Anfrage starten <ArrowRight className="h-5 w-5" />
               </a>
             </div>
@@ -227,15 +359,21 @@ function Index() {
       </section>
 
       {/* ANFRAGE */}
-      <section id="anfrage" className="mx-auto max-w-5xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8">
+      <section
+        id="anfrage"
+        className="mx-auto max-w-5xl px-4 py-16 sm:px-5 sm:py-24 lg:px-8"
+      >
         <div className="mb-8 text-center sm:mb-10">
-          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">Kostenlose Anfrage</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-green sm:text-sm">
+            Kostenlose Anfrage
+          </p>
           <h2 className="mt-3 text-display text-3xl text-brand-navy sm:text-4xl md:text-5xl">
             Erzählen Sie uns von Ihrem Projekt.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
-            Füllen Sie das Formular aus, laden Sie Bilder hoch und senden Sie alles
-            mit einem Klick per WhatsApp oder E-Mail.
+            Füllen Sie das Formular aus, laden Sie Bilder hoch und senden Sie
+            alles mit einem Klick per WhatsApp oder E-Mail. Wir antworten
+            innerhalb von 24 Stunden.
           </p>
         </div>
         <AnfrageForm />
