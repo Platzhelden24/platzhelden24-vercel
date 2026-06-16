@@ -1,48 +1,104 @@
 import { Link } from "@tanstack/react-router";
-import logoIcon from "@/assets/logo-icon.png";
+import logo from "@/assets/logo-full.png";
 import { COMPANY } from "@/lib/contact";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-radial-brand text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-5 sm:py-16 lg:px-8">
-        <div className="grid gap-10 sm:gap-12 lg:grid-cols-[1.2fr_1fr_1fr]">
-          <div>
-            <img src={logoIcon} alt="Platzhelden24" className="h-16 w-auto" />
+    <footer className="border-t border-border bg-brand-navy text-white">
+      <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
-            <p className="mt-5 text-lg font-medium text-white/90">{COMPANY.slogan}</p>
-            <p className="mt-3 max-w-md text-sm text-white/65">
-              Schnelle, faire und zuverlässige Entrümpelung &amp; Haushaltsauflösung
-              in Kleve und Umgebung. Festpreis. Besenrein. Termintreu.
+          {/* Logo + Info */}
+          <div className="lg:col-span-1">
+            <a href="/">
+              <img src={logo} alt="Platzhelden24" className="h-12 w-auto brightness-0 invert" />
+            </a>
+            <p className="mt-4 text-sm text-white/60">
+              Professionelle Entrümpelung &amp; Haushaltsauflösung im gesamten Niederrhein.
             </p>
           </div>
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green">
+
+          {/* Kontakt */}
+          <div>
+            <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-green">
               Kontakt
-            </h4>
-            <a href={`tel:${COMPANY.phoneIntl}`} className="flex items-center gap-3 text-white/85 hover:text-white">
-              <Phone className="h-4 w-4 text-brand-green" /> {COMPANY.phone}
-            </a>
-            <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-3 text-white/85 hover:text-white">
-              <Mail className="h-4 w-4 text-brand-green" /> {COMPANY.email}
-            </a>
+            </h3>
+            <ul className="space-y-2 text-sm text-white/70">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-brand-green" />
+                <a href={`tel:${COMPANY.phoneIntl}`} className="hover:text-white">
+                  {COMPANY.phone}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-brand-green" />
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-white">
+                  {COMPANY.email}
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
+                <span>{COMPANY.street}, {COMPANY.zip} {COMPANY.city}</span>
+              </li>
+            </ul>
           </div>
-          <div className="space-y-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-brand-green">
-              Rechtliches
-            </h4>
-            <ul className="space-y-2 text-white/85">
-              <li><Link to="/impressum" className="hover:text-white">Impressum</Link></li>
-              <li><Link to="/agb" className="hover:text-white">AGB</Link></li>
-              <li><Link to="/datenschutz" className="hover:text-white">Datenschutzerklärung</Link></li>
-              <li><Link to="/cookies" className="hover:text-white">Cookies</Link></li>
+
+          {/* Leistungen */}
+          <div>
+            <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-green">
+              Leistungen
+            </h3>
+            <ul className="space-y-1.5 text-sm text-white/70">
+              {[
+                "Entrümpelung",
+                "Wohnungsauflösung",
+                "Haushaltsauflösung",
+                "Kellerentrümpelung",
+                "Messie-Entrümpelung",
+                "Gewerbeentrümpelung",
+                "Hausmeisterservice",
+                "Winterdienst",
+              ].map((l) => (
+                <li key={l}>
+                  <a href="/#leistungen" className="hover:text-white">{l}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Navigation + Rechtliches */}
+          <div>
+            <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-green">
+              Navigation
+            </h3>
+            <ul className="space-y-1.5 text-sm text-white/70">
+              <li><a href="/" className="hover:text-white">Startseite</a></li>
+              <li><a href="/#leistungen" className="hover:text-white">Leistungen</a></li>
+              <li><a href="/#ablauf" className="hover:text-white">Ablauf</a></li>
+              <li><a href="/#ueber-uns" className="hover:text-white">Über uns</a></li>
               <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
+              <li>
+                <Link to="/standorte" className="hover:text-white">
+                  Standorte Niederrhein
+                </Link>
+              </li>
+            </ul>
+            <h3 className="mb-3 mt-5 text-sm font-bold uppercase tracking-widest text-brand-green">
+              Rechtliches
+            </h3>
+            <ul className="space-y-1.5 text-sm text-white/70">
+              <li><Link to="/impressum" className="hover:text-white">Impressum</Link></li>
+              <li><Link to="/datenschutz" className="hover:text-white">Datenschutz</Link></li>
+              <li><Link to="/agb" className="hover:text-white">AGB</Link></li>
+              <li><Link to="/cookies" className="hover:text-white">Cookie-Richtlinie</Link></li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/55">
-          © {new Date().getFullYear()} {COMPANY.name} · Alle Rechte vorbehalten.
+
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/40">
+          © {new Date().getFullYear()} Platzhelden24 · Alle Rechte vorbehalten ·
+          Entrümpelung &amp; Haushaltsauflösung im Niederrhein
         </div>
       </div>
     </footer>
