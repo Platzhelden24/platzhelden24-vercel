@@ -1,12 +1,11 @@
 export interface CityArea {
   slug: string;
   name: string;
-  region: "Kreis Kleve" | "Kreis Wesel" | "Südlicher Niederrhein";
+  region: "Kreis Kleve" | "Kreis Wesel" | "Südlicher Niederrhein" | "Rhein-Kreis Neuss" | "Randgebiet Niederrhein";
   distanceKm: number;
   note: string;
 }
 
-// Alle Orte, in denen Platzhelden24 im Niederrhein tätig ist
 export const LOCATIONS: CityArea[] = [
   // Kreis Kleve
   { slug: "kleve", name: "Kleve", region: "Kreis Kleve", distanceKm: 0, note: "unser Heimatstandort direkt an der niederländischen Grenze" },
@@ -43,10 +42,33 @@ export const LOCATIONS: CityArea[] = [
   { slug: "viersen", name: "Viersen", region: "Südlicher Niederrhein", distanceKm: 55, note: "die Stadt im Kreis Viersen" },
   { slug: "nettetal", name: "Nettetal", region: "Südlicher Niederrhein", distanceKm: 50, note: "die Stadt an der niederländischen Grenze" },
   { slug: "willich", name: "Willich", region: "Südlicher Niederrhein", distanceKm: 55, note: "die Stadt zwischen Krefeld und Mönchengladbach" },
+
+  // Rhein-Kreis Neuss / Mittlerer Niederrhein
+  { slug: "neuss", name: "Neuss", region: "Rhein-Kreis Neuss", distanceKm: 70, note: "die Großstadt am linken Niederrhein gegenüber von Düsseldorf" },
+  { slug: "dormagen", name: "Dormagen", region: "Rhein-Kreis Neuss", distanceKm: 75, note: "die Stadt am Rhein zwischen Köln und Düsseldorf" },
+  { slug: "grevenbroich", name: "Grevenbroich", region: "Rhein-Kreis Neuss", distanceKm: 70, note: "die Stadt im Rheinischen Braunkohlerevier" },
+  { slug: "juechen", name: "Jüchen", region: "Rhein-Kreis Neuss", distanceKm: 65, note: "die Gemeinde im Rhein-Kreis Neuss" },
+  { slug: "kaarst", name: "Kaarst", region: "Rhein-Kreis Neuss", distanceKm: 70, note: "die Stadt westlich von Düsseldorf" },
+  { slug: "korschenbroich", name: "Korschenbroich", region: "Rhein-Kreis Neuss", distanceKm: 65, note: "die Stadt zwischen Mönchengladbach und Neuss" },
+  { slug: "meerbusch", name: "Meerbusch", region: "Rhein-Kreis Neuss", distanceKm: 65, note: "die Stadt am linken Rheinufer nördlich von Düsseldorf" },
+
+  // Randgebiet Niederrhein
+  { slug: "oberhausen", name: "Oberhausen", region: "Randgebiet Niederrhein", distanceKm: 60, note: "die Stadt im westlichen Ruhrgebiet" },
+  { slug: "duesseldorf", name: "Düsseldorf", region: "Randgebiet Niederrhein", distanceKm: 70, note: "die Landeshauptstadt Nordrhein-Westfalens" },
+  { slug: "heinsberg", name: "Heinsberg", region: "Randgebiet Niederrhein", distanceKm: 65, note: "die Kreisstadt im Kreis Heinsberg an der niederländischen Grenze" },
+  { slug: "erkelenz", name: "Erkelenz", region: "Randgebiet Niederrhein", distanceKm: 60, note: "die Stadt im Kreis Heinsberg" },
+  { slug: "geilenkirchen", name: "Geilenkirchen", region: "Randgebiet Niederrhein", distanceKm: 70, note: "die Stadt im Kreis Heinsberg nahe der niederländischen Grenze" },
+  { slug: "hueckelhoven", name: "Hückelhoven", region: "Randgebiet Niederrhein", distanceKm: 60, note: "die Stadt im Kreis Heinsberg" },
+  { slug: "uebach-palenberg", name: "Übach-Palenberg", region: "Randgebiet Niederrhein", distanceKm: 75, note: "die Stadt im Kreis Heinsberg an der Grenze zu Aachen" },
+  { slug: "wegberg", name: "Wegberg", region: "Randgebiet Niederrhein", distanceKm: 65, note: "die Stadt im Kreis Heinsberg" },
+  { slug: "monheim-am-rhein", name: "Monheim am Rhein", region: "Randgebiet Niederrhein", distanceKm: 75, note: "die Stadt am rechten Rheinufer zwischen Düsseldorf und Leverkusen" },
+  { slug: "leverkusen", name: "Leverkusen", region: "Randgebiet Niederrhein", distanceKm: 80, note: "die Stadt am Rhein nördlich von Köln" },
 ];
 
 export const REGION_ORDER: CityArea["region"][] = [
   "Kreis Kleve",
   "Kreis Wesel",
   "Südlicher Niederrhein",
+  "Rhein-Kreis Neuss",
+  "Randgebiet Niederrhein",
 ];
