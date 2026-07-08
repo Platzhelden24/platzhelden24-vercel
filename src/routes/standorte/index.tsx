@@ -9,10 +9,11 @@ export const Route = createFileRoute("/standorte/")({
 });
 
 function Page() {
-  usePageSEO(
-    "Unsere Standorte – Entrümpelung im gesamten Niederrhein | Platzhelden24",
-    "Platzhelden24 bietet Entrümpelung und Haushaltsauflösung im gesamten Niederrhein – von Kleve über Wesel bis Duisburg. Festpreis, besenrein, Angebot in 24h."
-  );
+usePageSEO(
+  "Unsere Standorte – Entrümpelung im gesamten Niederrhein | Platzhelden24",
+  "Platzhelden24 bietet Entrümpelung und Haushaltsauflösung im gesamten Niederrhein – von Kleve über Wesel bis Duisburg. Festpreis, besenrein, Angebot in 24h.",
+  "https://platzhelden24.de/standorte"
+);
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-20 lg:px-8">
