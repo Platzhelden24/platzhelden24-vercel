@@ -75,10 +75,11 @@ function CityPage() {
     (l) => l.region === location.region && l.slug !== location.slug
   ).slice(0, 6);
 
-  usePageSEO(
-    `Entrümpelung ${location.name} | Haushaltsauflösung zum Festpreis – Platzhelden24`,
-    `Professionelle Entrümpelung & Haushaltsauflösung in ${location.name}. Festpreis-Garantie, besenrein, Angebot in 24h. Jetzt kostenlos anfragen!`
-  );
+usePageSEO(
+  `Entrümpelung ${location.name} | Haushaltsauflösung zum Festpreis – Platzhelden24`,
+  `Professionelle Entrümpelung & Haushaltsauflösung in ${location.name}. Festpreis-Garantie, besenrein, Angebot in 24h. Jetzt kostenlos anfragen!`,
+  `https://platzhelden24.de/standorte/${location.slug}`
+);
 
   const distanceText =
     location.distanceKm === 0
