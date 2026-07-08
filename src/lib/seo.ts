@@ -1,16 +1,12 @@
 import { useEffect } from "react";
 
-/**
- * Setzt Titel und Meta-Description einer Seite dynamisch.
- * Wird von Google beim Rendern der Seite gelesen.
- */
-export function usePageSEO(title: string, description: string) {
+export function usePageSEO(title: string, description: string, canonical?: string) {
   useEffect(() => {
     const prevTitle = document.title;
     document.title = title;
 
     let meta = document.querySelector('meta[name="description"]');
-    const prevDescription = meta?.getAttribute("content") ?? null;
+    const prevDesc = meta?.getAttribute("content") ?? null;
     if (!meta) {
       meta = document.createElement("meta");
       meta.setAttribute("name", "description");
@@ -18,11 +14,19 @@ export function usePageSEO(title: string, description: string) {
     }
     meta.setAttribute("content", description);
 
+    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (canonical) {
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "canonical");
+        document.head.appendChild(link);
+      }
+      link.setAttribute("href", canonical);
+    }
+
     return () => {
       document.title = prevTitle;
-      if (meta && prevDescription !== null) {
-        meta.setAttribute("content", prevDescription);
-      }
+      if (meta && prevDesc !== null) meta.setAttribute("content", prevDesc);
     };
-  }, [title, description]);
+  }, [title, description, canonical]);
 }
